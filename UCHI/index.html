@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>UCHI</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+	
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="task"></div>
+	<div id="arrows">
+		<form id="user_answers">
+			<div class="arrows">
+				<div class="arrow">
+					<input id="a" type="text" />
+					<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<defs><marker id="arrowHead1" markerWidth="10" markerHeight="20" refX="6" refY="3.5" orient="auto"><polyline points="0,1 5,3.5 0,6" /></marker></defs>
+						<path d="" marker-end="url(#arrowHead1)" />
+					</svg>
+				</div>
+				<div class="arrow next">
+					<input id="b" type="text" />
+					<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<defs><marker id="arrowHead2" markerWidth="10" markerHeight="20" refX="6" refY="3.5" orient="auto"><polyline points="0,1 5,3.5 0,6" /></marker></defs>
+						<path d="" marker-end="url(#arrowHead2)" />
+					</svg>
+				</div>
+			</div>
+		</form>
+		<img src="assets/img/sprite.png" />
+	</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
