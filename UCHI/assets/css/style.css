@@ -21,6 +21,7 @@ input:disabled {
 	border-color: transparent!important;
 	background: none!important;
 	color: black;
+	opacity: 1;
 }
 ::placeholder {
     color: black;
@@ -68,6 +69,7 @@ svg polyline {
 	margin: 40px auto;
 	padding: 20px 40px;
 	font-size: 40px;
+	width: 875px;
 }
 #task span {
 	padding: 1px 3px;
