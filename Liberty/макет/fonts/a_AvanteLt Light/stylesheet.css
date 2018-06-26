@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'a_AvanteLt';
+    src: url('AAvanteLtLight.eot');
+    src: url('AAvanteLtLight.eot?#iefix') format('embedded-opentype'),
+        url('AAvanteLtLight.woff2') format('woff2'),
+        url('AAvanteLtLight.woff') format('woff'),
+        url('AAvanteLtLight.ttf') format('truetype'),
+        url('AAvanteLtLight.svg#AAvanteLtLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+

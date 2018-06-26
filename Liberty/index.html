@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Liberty</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<link href="assets/css/style.css" rel="stylesheet" />
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="main_page">
+	
+	<!-------------------- ХЭДЕР ----------------------->
+	<header>
+		<!-------------------- Соцсети и email ----------------------->
+		<div id="social">
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-sm-4" id="social_icons">
+						<a data-toggle="modal" data-target="#modal_twitter" class="icon modal-link" id="twitter"></a>
+						<a data-toggle="modal" data-target="#modal_rss" class="icon modal-link" id="rss"></a>
+						<a data-toggle="modal" data-target="#modal_skype" class="icon modal-link" id="skype"></a>
+						<a data-toggle="modal" data-target="#modal_fb" class="icon modal-link" id="fb"></a>
+					</div>
+					<a href="mailto:example@gmail.com" class="col-sm-4" id="email">example<span>@gmail.com</span></a>
+				</div>
+			</div>
+		</div>
+		
+		<!-------------------- ГЛАВНОЕ МЕНЮ ----------------------->
+		<div id="menu">
+			<div class="wrapper">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-light">
+						<a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Liberty logo" title="Liberty logo" /></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="main_menu">
+							<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+								<li class="nav-item active">
+									<a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Услуги</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Поиск объектов</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Партнеры</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link disabled" href="#">Карьера</a>
+								</li>
+							</ul>
+							
+							<!-------------------- Поиск ----------------------->
+							<form class="form-inline" id="search">
+								<input class="form-control mr-sm-2" type="search" placeholder="Search">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit"></button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!-------------------- СЛАЙДЕР ----------------------->
+	<section id="main_slider">
+		<div class="container">
+			<div id="slider" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#slider" data-slide-to="0" class="active"></li>
+					<li data-target="#slider" data-slide-to="1"></li>
+					<li data-target="#slider" data-slide-to="2"></li>
+					<li data-target="#slider" data-slide-to="3"></li>
+					<li data-target="#slider" data-slide-to="4"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src="assets/img/slides/slide_1.jpg" alt="First slide">
+						<a href="#" class="desc">
+							<span class="title">Новые поступления агентства недвижимости</span><br/>
+							<span class="price">120000 у.е.</span>
+						</a>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="assets/img/slides/slide_2.jpg" alt="Second slide">
+						<a href="#" class="desc">
+							<span class="title">Потрясающий дом в Москве</span><br/>
+							<span class="price">165000 у.е.</span>
+						</a>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="assets/img/slides/slide_3.jpg" alt="Third slide">
+						<a href="#" class="desc">
+							<span class="title">Великолепная квартира в Москва-сити</span><br/>
+							<span class="price">1606000 у.е.</span>
+						</a>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="assets/img/slides/slide_4.jpg" alt="Forth slide">
+						<a href="#" class="desc">
+							<span class="title">Лучшее предложение месяца</span><br/>
+							<span class="price">260000 у.е.</span>
+						</a>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100" src="assets/img/slides/slide_5.jpg" alt="Fifth slide">
+						<a href="#" class="desc">
+							<span class="title">Новости июня</span><br/>
+							<span class="price">от 85000 у.е.</span>
+						</a>
+					</div>
+				</div>
+				<!-- Стрелки для переключения слайдов -->
+				<!-- <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a> -->
+			</div>
+		</div>
+	</section>
+	
+	<!-------------------- КАЛЬКУЛЯТОР ----------------------->
+	<section id="calculator">
+		<!-- <div class="wrapper"> -->
+		<div class="container">
+			<form id="calc" novalidate>
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<div class="form-group">
+							<label for="square">Введите площадь</label>
+							<input type="number" class="form-control" id="square" aria-describedby="square" placeholder="" min="1" />
+							<small class="form-text"></small>
+						</div>
+						<div class="form-group">
+							<label for="modifyer">Выберите модификатор</label>
+							<select id="modifyer" class="form-control">
+								<option selected value="0">не выбран</option>
+								<option value="1">Модификатор 1</option>
+								<option value="2">Модификатор 2</option>
+								<option value="3">Модификатор 3</option>
+							</select>
+							<small class="form-text"></small>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="res">Стоимость недвижимости:<br/><span class="result"></span></div>
+						<button type="submit" class="btn btn-primary" id="result">Посчитать</button>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="radio-options">
+									<div class="form-check-title">Выбор 2 (образец):</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+										<label class="form-check-label" for="exampleRadios1">
+											Опция 1
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+										<label class="form-check-label" for="exampleRadios2">
+											Опция 2
+										</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+										<label class="form-check-label" for="exampleRadios3">
+											Опция 3
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="check_options">
+									<div class="form-check-title">Выбор 3 (образец):</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+										<label class="form-check-label" for="inlineCheckbox1">1</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+										<label class="form-check-label" for="inlineCheckbox2">2</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+										<label class="form-check-label" for="inlineCheckbox3">3</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	
+	<!-------------------- КОНТЕНТ ----------------------->
+	<section id="content">
+		<div class="container">
+			<div class="row">
+				
+				<!-------------------- КАТАЛОГ НЕДВИЖИМОСТИ ----------------------->
+				<div class="col-lg-9">
+					<div class="row objects align-items-stretch">
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-3"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-4"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-2"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-1"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-5"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="content">
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="title">Дарницкий район</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="rate rate-3"></div>
+									</div>
+									<div class="col-sm-6">
+										<img class="img-fluid object-img" src="assets/img/objects/lot1.jpg" alt="" title=""/>
+									</div>
+									<div class="col-sm-6 pr-0">
+										<div class="desc">
+											Код: <span class="code">В-84522</span><br/>
+											<span class="address">Мишуги О.</span><br/>
+											Количество комнат: <span class="rooms">3</span><br/>
+											Площадь: <span class="square">98</span> м<sup>2</sup>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<div class="price"><span>750</span> у.е.</div>
+									</div>
+									<div class="col-sm-6 text-center">
+										<a href="#"><div class="btn btn-primary more">Подробнее</div></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-------------------- САЙДБАР ----------------------->
+				<div class="col-lg-3 sidebar">
+					<div id="sidebar">
+						<div class="content">
+							<strong>3D-туры объектов</strong>
+							<a href="#" class="d3">
+								<div class="title">Дом на продажу</div>
+								<div class="row no-gutters">
+									<div class="col-sm-6"><img class="img-fluid object-img" src="assets/img/objects/3dlot1.jpg" alt="" title=""/></div>
+									<div class="col-sm-6">
+										<div class="address">Бориспольский процев</div>
+										<div class="price">512000 USD</div>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="d3">
+								<div class="title">Дом на продажу</div>
+								<div class="row no-gutters">
+									<div class="col-sm-6"><img class="img-fluid object-img" src="assets/img/objects/3dlot1.jpg" alt="" title=""/></div>
+									<div class="col-sm-6">
+										<div class="address">Бориспольский процев</div>
+										<div class="price">512000 USD</div>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="d3">
+								<div class="title">Дом на продажу</div>
+								<div class="row no-gutters">
+									<div class="col-sm-6"><img class="img-fluid object-img" src="assets/img/objects/3dlot1.jpg" alt="" title=""/></div>
+									<div class="col-sm-6">
+										<div class="address">Бориспольский процев</div>
+										<div class="price">512000 USD</div>
+									</div>
+								</div>
+							</a>
+							<div class="commercial d-flex">
+								<div class="align-self-center w-100 text-center">РЕКЛАМА</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-------------------- МОДАЛЬНЫЕ ОКНА ----------------------->
+	<section class="container modals">
+		<!-- Modal -->
+		<div class="modal fade" id="modal_twitter" tabindex="-1" role="dialog" aria-labelledby="modal_twitter" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="mod_twitter">Twitter</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  </div>
+			  <div class="modal-body"></div>
+			  <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button></div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="modal_rss" tabindex="-1" role="dialog" aria-labelledby="modal_rss" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="mod_rss">RSS</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  </div>
+			  <div class="modal-body"></div>
+			  <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button></div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="modal_skype" tabindex="-1" role="dialog" aria-labelledby="modal_skype" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="mod_skype">Skype</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  </div>
+			  <div class="modal-body"></div>
+			  <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button></div>
+			</div>
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="modal_fb" tabindex="-1" role="dialog" aria-labelledby="modal_fb" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="mod_fb">Facebook</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			  </div>
+			  <div class="modal-body"></div>
+			  <div class="modal-footer"><button type="button" class="btn btn-primary" data-dismiss="modal">Закрыть</button></div>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<footer></footer>
+</div>
+<script src="assets/js/scripts.js"></script>
+</body>
+</html>
